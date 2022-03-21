@@ -1,4 +1,4 @@
-package com.company;
+package com.company.Genrics;
 
     class UserInterface {
         public static <E> void display(E[] list) {    // generic method displaying the elements of an array
