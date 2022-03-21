@@ -1,5 +1,8 @@
 package com.company.Collection;
 
+import java.util.ArrayList;
+import java.util.Collections;
+
 public class Course implements Comparable<Course> {
     public int courseId;
     public String courseName;
@@ -17,6 +20,19 @@ public class Course implements Comparable<Course> {
     @Override
     public String toString() {
         return this.courseId + ":" + this.courseName;
+    }
+
+    public static void main(String[] args) {
+        ArrayList<Course> courseList = new ArrayList<>();
+        courseList.add(new Course(124, "AngularJS"));
+        courseList.add(new Course(120, "Java"));
+        courseList.add(new Course(121, "Hibernate"));
+
+        Collections.sort(courseList);
+        System.out.println(courseList);
+
+// output: [124:AngularJS, 121:Hibernate, 120:Java]
+
     }
 }
 
